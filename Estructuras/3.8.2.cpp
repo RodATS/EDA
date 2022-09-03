@@ -26,7 +26,7 @@ int main() {
   // enter the operands
   
   cin >> a >> b;
-  // OPT-> 0-Addition, 1-Subtraction, 3-Multiplication, 4-Division
+  // OPT-> 0-Addition, 1-Subtraction, 2-Multiplication, 3-Division
   cin >> opt;
   /*
   switch( opt )
