@@ -1,6 +1,13 @@
 #include <iostream>
 using namespace std;
 
+void swapp_char(unsigned char &tmp, unsigned char *data, int j){
+  tmp = data[j];
+  data[j] = data[j+2];
+  data[j+2] = tmp;
+}
+
+
 unsigned char* LeerBMP(char* filename)
 {
     //Abrir el archivo
@@ -27,9 +34,7 @@ unsigned char* LeerBMP(char* filename)
         for(int j = 0; j < width*3; j += 3)
         {
             // Lo invierte por la forma de leerlo (B, G, R) a (R, G, B)
-            tmp = data[j];
-            data[j] = data[j+2];
-            data[j+2] = tmp;
+           swapp_char(tmp,data,j);
 
             cout << "R: "<< (int)data[j] << " G: " <<(int)data[j+1]<< " B: " << (int)data[j+2]<< endl;
         }
