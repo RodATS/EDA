@@ -28,10 +28,13 @@ public:
     }
 
     void look_min(){
-      for (CNode<T>* n = head; n != 0; n = n->next )
+      CNode<T>* n = head;
+      for (int i = 0; i < nelem; i++){
         if(n->value<=min->value){
           min=n;
         }
+        n=n->next;
+      }
     }   
     void push_back(T x)
     {
@@ -56,9 +59,9 @@ public:
       if(min==tail){
         CNode<T>* n= tail;
         tail=n->prev;
+        delete n;
         nelem --;
         min=head;
-        delete n;
         look_min();
         return;
       }
@@ -166,10 +169,11 @@ private:
 
 int main(){
   CQueue<int, CList<int>> q;
-    q.insert(1);
+    q.insert(4);
     q.insert(6);
     q.insert(2);
     q.insert(3);
+  q.insert(1);
     q.print();
     q.top();
     q.pop();
