@@ -29,7 +29,7 @@ public:
 
     void look_min(){
       for (CNode<T>* n = head; n != 0; n = n->next )
-        if(n->value<min->value){
+        if(n->value<=min->value){
           min=n;
         }
     }   
@@ -113,7 +113,15 @@ public:
         delete aux;
         head = n;
         nelem --;
-    }*/
+    }
+void print()
+    {
+        std::cout<<"\n";
+        for (CNode<T>* n = head; n != 0; n = n->next )
+            std::cout<<n->value<<" ";
+        cout<<endl;
+    }
+*/
     
     T& operator[](int i)
     {
@@ -123,13 +131,7 @@ public:
         return n->value;
     }
     
-    void print()
-    {
-        std::cout<<"\n";
-        for (CNode<T>* n = head; n != 0; n = n->next )
-            std::cout<<n->value<<" ";
-        cout<<endl;
-    }
+    
     void print2()
     {
         std::cout<<"\n";
@@ -164,18 +166,22 @@ private:
 
 int main(){
   CQueue<int, CList<int>> q;
-    q.insert(3);
-    q.insert(6);
     q.insert(1);
-  q.insert(2);
-  q.print();
-  q.top();
+    q.insert(6);
+    q.insert(2);
+    q.insert(3);
+    q.print();
+    q.top();
     q.pop();
-    //q.pop();
+    q.print();
+  
+    q.top();
+  q.pop();
     q.print();
   q.top();
-  q.print();
-
+   q.pop();
+    q.print();
+  
   
   return 0;
 }
