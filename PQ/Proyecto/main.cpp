@@ -8,7 +8,8 @@ using namespace std;
 
 
 int main(){
-  PQueue<int, CList<int>> q;
+  bool mx=false;//mayor=true, menor=false
+  PQueue<int, CList<int>> q(mx);
   q.insert(4);
   q.insert(6);
   q.insert(2);
