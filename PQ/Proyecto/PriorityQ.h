@@ -23,8 +23,6 @@ public:
     T top()
   {return seq.top_front();}
     
-    void print()
-    {seq.print2();}
     
 
 private:
