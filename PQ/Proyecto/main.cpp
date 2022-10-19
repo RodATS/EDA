@@ -17,28 +17,29 @@ int main(){
   q.insert(1);
   q.insert(1);
   q.insert(8);
-  cout<<q.top()<<endl;
-  q.pop();
-  cout<<q.top()<<endl;
-  q.pop();
-  cout<<q.top()<<endl;
-  q.pop();
+  q.insert(10);
+
+  for(int i=0;i<8;i++){
+    cout<<q.top()<<"\t";
+    q.pop();
+  }
+  cout<<endl;
   
-  /*
-  PQueue<string, CList<string>> q;
-  q.insert("a");
-  q.insert("b");
-  q.insert("a");
-  q.insert("c");
-  q.insert("f");
-  q.insert("j");
-  q.insert("h");
-  cout<<q.top()<<endl;
-  q.pop();
-  cout<<q.top()<<endl;
-  q.pop();
-  cout<<q.top()<<endl;
-  q.pop();
-  */
+  PQueue<string, CList<string>> Lq(mx);
+  Lq.insert("a");
+  Lq.insert("b");
+  Lq.insert("a");
+  Lq.insert("c");
+  Lq.insert("f");
+  Lq.insert("j");
+  Lq.insert("h");
+  Lq.insert("n");
+
+  for(int i=0;i<8;i++){
+    cout<<Lq.top()<<"\t";
+    Lq.pop();
+  }
+  cout<<endl;
+  
   return 0;
 }
