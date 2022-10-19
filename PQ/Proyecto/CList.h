@@ -29,7 +29,20 @@ public:
         }
         n=n->next;
       }
-    }   
+    }  
+
+
+    void look_max(){
+        CNode<T>* n = head;
+        for (int i = 0; i < nelem; i++){
+          if(n->value>=min->value){
+            min=n;
+          }
+          n=n->next;
+        }
+      }   
+
+//--------------------------------------------------------
     void push_back(T x)
     {
         CNode<T>* n = new CNode<T>(x);
@@ -37,8 +50,15 @@ public:
             head = tail = min = n;
         else
         {
-          if(min->value > n->value){
-            min=n;
+          if(max==0){
+            if(min->value > n->value){
+              min=n;
+            }
+          }
+          else{
+            if(min->value < n->value){
+              min=n;
+            }
           }
             n->prev = tail;
             tail->next = n;
@@ -56,7 +76,10 @@ public:
         delete n;
         nelem --;
         min=head;
-        look_min();
+        if(max==0)
+          look_min();
+        else
+          look_max();
         return;
       }
       if(min==head){
@@ -67,7 +90,10 @@ public:
         head = n;
         min=head;
         nelem --;
-        look_min();
+        if(max==0)
+          look_min();
+        else
+          look_max();
         return;
       }
       
@@ -80,11 +106,18 @@ public:
         min=head;
         delete aux;
         
-        look_min();
+        if(max==0)
+          look_min();
+        else
+          look_max();
     }
 
     T top_front(){
       return min->value;
+    }
+
+    void turn_on_max(bool n){
+      max=n;
     }
     /*
     void push_front(T x)
@@ -140,6 +173,7 @@ void print()
 private:
     CNode<T>* head, *tail, *min;
     int nelem;
+    bool max=0;
 };
 
 
