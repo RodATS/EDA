@@ -151,7 +151,7 @@ void print()
             std::cout<<n->value<<" ";
         cout<<endl;
     }
-*/
+
     
     T& operator[](int i)
     {
@@ -169,7 +169,7 @@ void print()
             std::cout<<(*this)[i]<<" ";
       cout<<endl;
     }
-    
+    */
 private:
     CNode<T>* head, *tail, *min;
     int nelem;
