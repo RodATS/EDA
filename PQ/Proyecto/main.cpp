@@ -23,6 +23,21 @@ int main(){
   cout<<q.top()<<endl;
   q.pop();
   
-  
+  /*
+  PQueue<string, CList<string>> q;
+  q.insert("a");
+  q.insert("b");
+  q.insert("a");
+  q.insert("c");
+  q.insert("f");
+  q.insert("j");
+  q.insert("h");
+  cout<<q.top()<<endl;
+  q.pop();
+  cout<<q.top()<<endl;
+  q.pop();
+  cout<<q.top()<<endl;
+  q.pop();
+  */
   return 0;
 }
