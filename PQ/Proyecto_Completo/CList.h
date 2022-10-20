@@ -27,7 +27,7 @@ public:
     {
         CNode<T>* n = new CNode<T>(x,p);
         if (!nelem)
-            head = tail= n;
+            head =  n;
         else
         {
           //mayor a menor

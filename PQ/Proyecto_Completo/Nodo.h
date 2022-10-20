@@ -12,11 +12,11 @@ struct CNode
     {
         value = x;
         prioridad=p;
-        next = prev = 0;
+        next = 0;
     }
     T value;
     int prioridad;
-    CNode<T> *next, *prev;
+    CNode<T> *next;
 };
 
 
