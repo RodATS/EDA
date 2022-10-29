@@ -1,1 +1,6 @@
-a
+https://en.wikipedia.org/wiki/Z-order_curve
+
+Los valores ingresados en un árbol binario.
+Objetivo:
+1 Se da un numero para dar el orden 2D (en binario).
+2 
