@@ -11,28 +11,7 @@ using namespace std;
 
 
 int main() {
-    /*
-     vector<thread> vec(2); //cantidad de threads que quieras usar
-    vec[0] = thread(Agregar,ref(s), 5) ;//si el parametro 2 es una referencia
-    vec[0].join;
-   // thread th1 (&arbol::sumar, this, ref(pos->nodes[i]), ref(sumas[i]));
-   // thread th1 (s,5);
-   // th1.join();
-
-   // s(5);
-    s.insert(8);*/
-    /*
-    s.thr(5);
-    cout << s.top() << endl;
-    s.print();*/
-
-    /*
-    s.insert(5);
-    s.insert(1);
-    s.insert(18);
-    s.insert(6);
-    s.insert(3);
-      */
+    
     srand(time(NULL));
     PQueue s;
         chrono::time_point<std::chrono::system_clock> start, end;
@@ -50,9 +29,5 @@ int main() {
         }
     
 
-    // s.print();
-
-
-  // s.pop();
-   //s.print();
+   
 }
